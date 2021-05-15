@@ -1,5 +1,6 @@
 //Copyright (c) 2011-2020 <>< Charles Lohr - Under the MIT/x11 or NewBSD License you choose.
 // NO WARRANTY! NO GUARANTEE OF SUPPORT! USE AT YOUR OWN RISK
+// C++ translation by Kronka
 
 #include <stdio.h>
 #include <stdlib.h>
