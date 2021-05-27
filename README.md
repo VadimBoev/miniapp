@@ -10,7 +10,9 @@ tasks to be solved:
 - connect to the project CURL (or similar that works with SSL)
 - ~~slightly change the structure of the project~~
 - Pull up the Java API (keyboard and so on)
-- Abandon libc++_shared.so (so that everything is in one place .SO, there are no ways and ideas yet)
+- Abandon libc++_shared.so (so that everything is in one place .SO, there are no ways and ideas yet)  
+  
+## How to collect this information will be later
 
 There is not much left and I will post the code  
 ![alt text](https://raw.githubusercontent.com/Kronka/miniapp/main/first_launch_imgui.png)
