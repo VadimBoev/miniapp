@@ -14,5 +14,4 @@ tasks to be solved:
   
 ## How to collect this information will be later
 
-There is not much left and I will post the code  
 ![alt text](https://raw.githubusercontent.com/Kronka/miniapp/main/first_launch_imgui.png)
