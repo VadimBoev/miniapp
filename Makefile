@@ -1,5 +1,4 @@
-#Copyright (c) 2019-2020 <>< Charles Lohr - Under the MIT/x11 or NewBSD License you choose.
-# NO WARRANTY! NO GUARANTEE OF SUPPORT! USE AT YOUR OWN RISK
+# Thanks to CnLohr for a good Makefile example
 # adapted on C++ by Vadim Boev
 
 all : makecapk.apk
