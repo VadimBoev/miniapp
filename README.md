@@ -7,7 +7,7 @@ The rawdraw repository is used (I'll tell you everything later)[no longer used]
 
 tasks to be solved:
 - a more convenient way to compile a project
-- connect to the project CURL (or similar that works with SSL)
+- ~~connect to the project CURL (or similar that works with SSL)~~ (use Java method HTTPConnection)
 - ~~slightly change the structure of the project~~
 - Pull up the Java API (keyboard and so on)
 - Abandon libc++_shared.so (so that everything is in one place .SO, there are no ways and ideas yet)  
