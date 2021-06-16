@@ -20,7 +20,7 @@ static bool                 g_Initialized = false;
 static char                 g_LogTag[] = "ImGuiExample";
 
 // Forward declarations of helper functions
-static int ShowSoftKeyboardInput();
+void ShowSoftKeyboardInput(bool pShow);
 static int PollUnicodeChars();
 static int GetAssetData(const char* filename, void** out_data);
 
@@ -141,7 +141,10 @@ void tick()
     // Open on-screen (soft) input if requested by Dear ImGui
     static bool WantTextInputLast = false;
     if (io.WantTextInput && !WantTextInputLast)
-        ///ShowSoftKeyboardInput();
+    {
+        //it for test
+        ShowSoftKeyboardInput(true);
+    }
     WantTextInputLast = io.WantTextInput;
 
     // Start the Dear ImGui frame
@@ -286,8 +289,9 @@ void android_main(struct android_app* app)
 
 // Unfortunately, there is no way to show the on-screen input from native code.
 // Therefore, we call ShowSoftKeyboardInput() of the main activity implemented in MainActivity.kt via JNI.
-static int ShowSoftKeyboardInput()
+void ShowSoftKeyboardInput(bool pShow)
 {
+	/*
     JavaVM* java_vm = g_App->activity->vm;
     JNIEnv* java_env = NULL;
 
@@ -314,6 +318,60 @@ static int ShowSoftKeyboardInput()
         return -5;
 
     return 0;
+	*/
+	
+	jint lFlags = 0;
+	
+	JavaVM* java_vm = g_App->activity->vm;
+    JNIEnv* java_env = NULL;
+
+    jint jni_return = java_vm->GetEnv((void**)&java_env, JNI_VERSION_1_6);
+    if (jni_return == JNI_ERR)
+	{
+		LogA("JNI ERROR!");
+	}
+
+	java_vm->AttachCurrentThread(&java_env, NULL);
+	jclass activityClass = java_env->FindClass("android/app/NativeActivity");
+
+	// Retrieves NativeActivity.
+	jobject lNativeActivity = g_App->activity->clazz;
+
+
+	// Retrieves Context.INPUT_METHOD_SERVICE.
+	jclass ClassContext = java_env->FindClass("android/content/Context");
+	jfieldID FieldINPUT_METHOD_SERVICE = java_env->GetStaticFieldID(ClassContext, "INPUT_METHOD_SERVICE", "Ljava/lang/String;" );
+	jobject INPUT_METHOD_SERVICE = java_env->GetStaticObjectField(ClassContext, FieldINPUT_METHOD_SERVICE );
+
+	// Runs getSystemService(Context.INPUT_METHOD_SERVICE).
+	jclass ClassInputMethodManager = java_env->FindClass("android/view/inputmethod/InputMethodManager" );
+	jmethodID MethodGetSystemService = java_env->GetMethodID(activityClass, "getSystemService", "(Ljava/lang/String;)Ljava/lang/Object;");
+	jobject lInputMethodManager = java_env->CallObjectMethod(lNativeActivity, MethodGetSystemService, INPUT_METHOD_SERVICE);
+
+	// Runs getWindow().getDecorView().
+	jmethodID MethodGetWindow = java_env->GetMethodID(activityClass, "getWindow", "()Landroid/view/Window;");
+	jobject lWindow = java_env->CallObjectMethod(lNativeActivity, MethodGetWindow);
+	jclass ClassWindow = java_env->FindClass("android/view/Window");
+	jmethodID MethodGetDecorView = java_env->GetMethodID(ClassWindow, "getDecorView", "()Landroid/view/View;");
+	jobject lDecorView = java_env->CallObjectMethod(lWindow, MethodGetDecorView);
+
+	if (pShow) {
+		// Runs lInputMethodManager.showSoftInput(...).
+		jmethodID MethodShowSoftInput = java_env->GetMethodID(ClassInputMethodManager, "showSoftInput", "(Landroid/view/View;I)Z");
+		/*jboolean lResult = */java_env->CallBooleanMethod(lInputMethodManager, MethodShowSoftInput, lDecorView, lFlags);
+	} else {
+		// Runs lWindow.getViewToken()
+		jclass ClassView = java_env->FindClass("android/view/View");
+		jmethodID MethodGetWindowToken = java_env->GetMethodID(ClassView, "getWindowToken", "()Landroid/os/IBinder;");
+		jobject lBinder = java_env->CallObjectMethod(lDecorView, MethodGetWindowToken);
+
+		// lInputMethodManager.hideSoftInput(...).
+		jmethodID MethodHideSoftInput = java_env->GetMethodID(ClassInputMethodManager, "hideSoftInputFromWindow", "(Landroid/os/IBinder;I)Z");
+		/*jboolean lRes = */java_env->CallBooleanMethod(lInputMethodManager, MethodHideSoftInput, lBinder, lFlags);
+	}
+
+	// Finished with the JVM.
+	java_vm->DetachCurrentThread();
 }
 
 // Unfortunately, the native KeyEvent implementation has no getUnicodeChar() function.
