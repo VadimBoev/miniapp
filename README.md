@@ -15,12 +15,12 @@ Example just app for Android in C++ with ImGUI (how graphic wrapper)
 We need:  
 * Visual Studio 2019  
 * Installed from "Visual Studio Installer":
-* Development of mobile applications in C++ (a set of tools)  
-* OpenJDK (I don't remember if it is included in the set of tools, but you need to install it)  
-* Connecting usb-devices  
-* Installing the SDK for Android (API Level 30)  
-* Installing the SDK for Android (Level API 25, local installation for the development of mobile applications in C++)  
-* Addition: you can install the emulator, but I could not start it, apparently because of AMD Ryzen. I use my phone, it's convenient.  
+    * Development of mobile applications in C++ (a set of tools)  
+    * OpenJDK (I don't remember if it is included in the set of tools, but you need to install it)  
+    * Connecting usb-devices  
+    * Installing the SDK for Android (API Level 30)  
+    * Installing the SDK for Android (Level API 25, local installation for the development of mobile applications in C++)  
+    * Addition: you can install the emulator, but I could not start it, apparently because of AMD Ryzen. I use my phone, it's convenient.  
 * Also, for convenient logging of Android (logcat in VS), I advise you to install this: https://marketplace.visualstudio.com/items?itemName=LancelotChen.AndroidLogcatOutput  
   
 Open `miniapp.sln` and compile
