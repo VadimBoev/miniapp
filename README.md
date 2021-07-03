@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/Kronka/miniapp/main/miniapp_logo.png)
+![alt text](miniapp_logo.png)
 
 # MiniApp
 Stop using Java when creating your Android app! Create an application entirely in C++
@@ -11,19 +11,20 @@ Example just app for Android in C++ with ImGUI (how graphic wrapper)
 - ImGUI v1.83  
   
 ## Build  
-  
+![Installaltion](visual_studio_installation.png)
+
 We need:  
-* Visual Studio 2019  
-* Installed from "Visual Studio Installer":
-    * Development of mobile applications in C++ (a set of tools)  
-    * OpenJDK (I don't remember if it is included in the set of tools, but you need to install it)  
-    * Connecting usb-devices  
-    * Installing the SDK for Android (API Level 30)  
-    * Installing the SDK for Android (Level API 25, local installation for the development of mobile applications in C++)  
-    * Addition: you can install the emulator, but I could not start it, apparently because of AMD Ryzen. I use my phone, it's convenient.  
-* Also, for convenient logging of Android (logcat in VS), I advise you to install this: https://marketplace.visualstudio.com/items?itemName=LancelotChen.AndroidLogcatOutput  
+* Visual Studio 2015 or later  
+    * Mobile Development with C++
+        * Android NDK 
+        * OpenJDK (installed bydefault automatically)
+        * C++ Android development tools
+        * Apache Ant
+        * Android SDK (installed bydefault automatically)
+* Android Emulaltor: VS emulator is slow. Better use your phone. Or use emulator like Nox (5.x,7.x), leapdroid (4.x).  
+* Logcat: For convenient logging of Android (logcat in VS), I advise you to install this: https://marketplace.visualstudio.com/items?itemName=LancelotChen.AndroidLogcatOutput  
   
-Open `miniapp.sln` and compile
+Open `miniapp.sln` with Visual Studio and compile
   
 ## How do I change the icons?
 
