@@ -13,8 +13,8 @@ Example just app for Android in C++ with ImGUI (how graphic wrapper)
 ## Build  
   
 We need:  
-- Visual Studio 2019  
-- Installed from "Visual Studio Installer":
+* Visual Studio 2019  
+* Installed from "Visual Studio Installer":
 * Development of mobile applications in C++ (a set of tools)  
 * OpenJDK (I don't remember if it is included in the set of tools, but you need to install it)  
 * Connecting usb-devices  
