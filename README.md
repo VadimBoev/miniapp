@@ -9,6 +9,7 @@ Example just app for Android in C++ with ImGUI (how graphic wrapper)
 - OpenGL v3 is used  
 - Added icons  
 - ImGUI v1.83  
+- Calling the keyboard from JNI  
   
 ## Build  
 ![Installaltion](visual_studio_installation.png)
