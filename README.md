@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/Kronka/miniapp/main/miniapp_logo.png)
 
-# miniapp
+# MiniApp
 Stop using Java when creating your Android app! Create an application entirely in C++
 
 Example just app for Android in C++ with ImGUI (how graphic wrapper)
@@ -22,6 +22,8 @@ We need:
 * Installing the SDK for Android (Level API 25, local installation for the development of mobile applications in C++)  
 * Addition: you can install the emulator, but I could not start it, apparently because of AMD Ryzen. I use my phone, it's convenient.  
 * Also, for convenient logging of Android (logcat in VS), I advise you to install this: https://marketplace.visualstudio.com/items?itemName=LancelotChen.AndroidLogcatOutput  
+  
+Open `miniapp.sln` and compile
   
 ## How do I change the icons?
 
