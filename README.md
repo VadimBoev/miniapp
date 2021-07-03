@@ -28,7 +28,7 @@ Open `miniapp.sln` and compile
 ## How do I change the icons?
 
 Make png icon in size 192x192 used Photoshop, Paint and other.  
-Load you icon in https://easyappicon.com/ and selected *adaptive icon*
+Load you icon in https://easyappicon.com/ and selected *adaptive icon*  
 You get zip archive and in folder Android there will be folders with icons.  
   
 ## Special thanks  
