@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/Kronka/miniapp/main/miniapp.png)
+![alt text](https://raw.githubusercontent.com/Kronka/miniapp/main/miniapp_logo.png)
 
 # miniapp
 Stop using Java when creating your Android app! Create an application entirely in C++
