@@ -8,7 +8,7 @@ Example just app for Android in C++ with ImGUI (how graphic wrapper)
 ## Features  
 - OpenGL v3 is used  
 - Added icons  
-- ImGUI v1.87  
+- ImGUI v1.88  
 - Calling the keyboard from JNI  
   
 ## Build  
