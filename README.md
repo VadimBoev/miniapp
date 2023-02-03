@@ -3,7 +3,9 @@
 # MiniApp
 Stop using Java when creating your Android app! Create an application entirely in C++
 
-Example just app for Android in C++ with ImGUI (how graphic wrapper)
+Example just app for Android in C++ with ImGUI (how graphic wrapper)  
+  
+This works very well in VS 2019. In VS 2022, something was broken and the build for Android no longer works that way. I'll redo it all later.  
 
 ## Features  
 - OpenGL v3 is used  
