@@ -1,0 +1,11 @@
+﻿  [armeabi-v7a] Compile thumb  : miniapp <= android_native_app_glue.c
+  [armeabi-v7a] Compile++ thumb: miniapp <= main.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui_demo.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui_draw.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui_impl_android.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui_impl_opengl3.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui_tables.cpp
+  [armeabi-v7a] Compile++ thumb: miniapp <= imgui_widgets.cpp
+  [armeabi-v7a] SharedLibrary  : libminiapp.so
+  [armeabi-v7a] Install        : libminiapp.so => libs/armeabi-v7a/libminiapp.so
