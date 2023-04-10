@@ -25,7 +25,7 @@ Features
   - **Free and open source**.
   
 ## Build  
-![Installaltion](visual_studio_installation.png)
+![Installaltion](screen.png)
 
 We need:  
 * Visual Studio 2022 or later  
