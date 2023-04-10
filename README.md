@@ -1,6 +1,6 @@
 <img align="left" src="https://github.com/VadimBoev/miniapp/blob/main/miniapp_logo.png" width="190px">
 
-**miniapp is the basis for creating your first C++ application for Android!.**
+**MiniApp is the basis for creating your first C++ application for Android!.**
 
 miniapp was inspired by the RawdrawAndroid project, but serves as a further development of Android apps.
 
@@ -57,4 +57,4 @@ You get zip archive and in folder Android there will be folders with icons.
 - **graysuit**: he helped me figure out how to connect Android to VS and much more  
   
 ## Screenshot  
-![alt text](https://raw.githubusercontent.com/VadimBoev/miniapp/main/first_launch_imgui.png)
+<img align="left" src="https://github.com/VadimBoev/miniapp/blob/main/first_launch_imgui.png" height="480px" width="360px">
