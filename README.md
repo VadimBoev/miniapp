@@ -1,4 +1,4 @@
-<img align="left" src="https://github.com/raysan5/raylib/blob/master/miniapp_logo.png" width="288px">
+<img align="left" src="https://github.com/VadimBoev/miniapp/blob/master/miniapp_logo.png" width="288px">
 
 **miniapp is the basis for creating your first C++ application for Android!.**
 
