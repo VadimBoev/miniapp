@@ -6,7 +6,9 @@ miniapp was inspired by the RawdrawAndroid project, but serves as a further deve
 
 *NOTE for ADVENTURERS: This is the basic part that allows you to run 'Hello World' on ImGui. Don't be afraid to write in the 'Issue', I will help you in any way I can.*
 
----
+---  
+  
+Work has begun on updating the repository [28.09.2023]
 
 <br>
 
